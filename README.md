@@ -1,35 +1,73 @@
-# Image Upscaling with Real-ESRGAN
+# Image Upscaling
 
-A notebook workflow for increasing image resolution with Real-ESRGAN x4plus.
+**Increase image resolution with a Python image-upscaling workflow.**
 
-**Stack:** Python, PyTorch, Real-ESRGAN, CUDA (optional), Jupyter Notebook
+[![GitHub](https://img.shields.io/badge/GitHub-Source-24292f?logo=github)](https://github.com/chyk2468/Image-Upscaling-py)
 
-![Image upscaling workflow](docs/readme-architecture.svg)
+## 1. Project Title & Tagline
 
-## Pipeline
+Increase image resolution with a Python image-upscaling workflow.
 
-1. Place source images in `inputs/`.
-2. Load the Real-ESRGAN x4plus model weights.
-3. Run inference on each image, using CUDA when available.
-4. Save enhanced images under `outputs/`.
+## 2. Problem Statement
 
-## Run locally
+Low-resolution images lose detail when enlarged. This project provides a repeatable workflow for processing an image and inspecting the upscaled output.
+
+## 3. Project Preview
+
+Add a real screenshot or before/after comparison after running the project. Include the input and output with the same crop and scale where applicable.
+
+[Open interactive architecture](architecture.html)
+
+## 4. Overview
+
+The project follows a reproducible pipeline from input data through its main processing step to an output that can be inspected and evaluated.
+
+## 5. Key Features
+
+- Load an input image.
+- Run the configured upscaling method.
+- Save the output image for comparison.
+- Compare input and output dimensions and visual quality.
+
+## 6. Architecture / Workflow
+
+![Animated Image Upscaling workflow](docs/animated-workflow.svg)
+
+Open the [interactive architecture explorer](architecture.html) to select a stage and read its role.
+
+## 7. Tech Stack
+
+Python, image-processing libraries, and the upscaling model configured in the repository
+
+## 8. Installation & Setup
 
 ```bash
 git clone https://github.com/chyk2468/Image-Upscaling-py.git
 cd Image-Upscaling-py
-pip install -r requirment.txt
+python -m venv .venv
 ```
 
-Open and run `unblur.ipynb` in Jupyter Notebook. Check the notebook for the expected input/output folders and model path.
+Activate the environment and install the dependencies listed by the project.
 
-## Repository map
+## 9. Usage
 
-- `unblur.ipynb`: image upscaling pipeline
-- `RealESRGAN_x4plus.pth`: model weights
-- `inputs/`: source images
-- `outputs/`: generated images
+Run the repository's documented entry point, provide an input image, and inspect the saved result. Verify the configured model weights and output path before processing a large batch.
 
-## Notes
+## 10. Project Structure
 
-Upscaling adds model-generated detail and is not a guarantee of recovering the original scene. Inspect output for unwanted artifacts. GPU acceleration requires compatible drivers and a matching PyTorch installation.
+Start with the main Python script or notebook, then inspect model loading, image preprocessing, and output-writing code.
+
+## 11. Results & Demo
+
+Add before/after samples and a consistent quality comparison, such as image dimensions and a perceptual metric, after running the project.
+
+## 12. Future Enhancements
+
+- Add batch processing.
+- Provide before/after visual comparison.
+- Document model weights and licence.
+- Add tests for image formats and output dimensions.
+
+## 13. License
+
+Check the repository and model-weight licences before redistributing generated outputs or model files.
